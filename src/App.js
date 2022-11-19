@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+// Import Component
+import NavbarComp from "./Component/Navbar/NavbarComp"
+import Content1 from "./Component/Content/Content1";
+import Content2 from "./Component/Content/Content2";
+import Content3 from "./Component/Content/Content3";
+import Content4 from "./Component/Content/Content4";
+import Footer from "./Component/Footer/Footer";
+
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    document.title = 'Porto - Dimas Frans S';
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <NavbarComp/>
+        <Content1/>
+        <Content2/>
+        <Content3/>
+        <Content4/>
+        <Footer/>
+    </>
   );
 }
 
