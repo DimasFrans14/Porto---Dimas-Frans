@@ -4,9 +4,17 @@
   margin: 0px;
   padding: 0px;
 }
-/* body{
-  height: 200vh;
-} */
+
+.App{
+  background-color: #404b4e;
+  width: 100%;
+  height: 100vh;
+}
+
+.page-loader{
+  margin: 0px auto;
+  padding-top: 40rem;
+}
 
 /* Content 1 */
 
