@@ -16,6 +16,12 @@
   padding-top: 40rem;
 }
 
+@media screen and (min-width:767px) and (max-width:1023px) {
+  .page-loader{
+    padding-top: 65rem;
+  }
+}
+
 /* Content 1 */
 
 .content-1{

@@ -30,7 +30,7 @@ function App() {
       <div className="App">
         {isLoading ? (
           <HashLoader color="#49a6bf"
-            size={50}
+            size={30}
             className="page-loader"
           />
         ) : (
