@@ -29,7 +29,8 @@ function App() {
     <>
       <div className="App">
         {isLoading ? (
-          <HashLoader color="#36d7b7"
+          <HashLoader color="#49a6bf"
+            size={50}
             className="page-loader"
           />
         ) : (
