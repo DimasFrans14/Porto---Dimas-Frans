@@ -4,7 +4,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import Button from "react-bootstrap/Button";
 import { Typewriter } from "react-simple-typewriter";
 
-export default function content1() {
+export default function Content1() {
   return (
     <>
       <div className="content-1">
