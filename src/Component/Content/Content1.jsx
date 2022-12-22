@@ -1,10 +1,27 @@
-import React from "react";
+import { React, useState, useEffect }from "react";
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Button from "react-bootstrap/Button";
 import { Typewriter } from "react-simple-typewriter";
+import TextTransition, { presets } from "react-text-transition";
 
 export default function Content1() {
+
+  const text = ['Dimas Frans Shehmit', 'Front End Dev Enthusiast', 'Informatics Engineering Student']
+
+  const [index, setIndex] = useState(0)
+  
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndex(index => index + 1)  
+    }, 3500);
+  
+  
+    return () => {
+      clearTimeout(intervalId)
+    };
+  }, []);
+
   return (
     <>
       <div className="content-1">
@@ -15,11 +32,12 @@ export default function Content1() {
             data-aos-delay="400"
             data-aos-duration="1000"
           >
-            <p>Hi There!</p>
+            <p className="top-title">Hi There!</p>
+            <div className="text-animation-onDesktop">
             <p className="sub-text-hero">
               I'm{" "}
               <span style={{ color: "green", fontWeight: "bold" }}>
-                <Typewriter
+                 <Typewriter
                   words={[
                     "Dimas Frans Shehmit",
                     "Informatic Engineerin Student",
@@ -27,13 +45,21 @@ export default function Content1() {
                   ]}
                   loop={true}
                   cursor
-                  cursorStyle="_"
+                  cursorStyle="|"
                   typeSpeed={70}
                   deleteSpeed={50}
                   delaySpeed={1000}
                 />
               </span>
             </p>
+            </div>
+              <div className="text-animation-onMobile">
+                <p>
+                <TextTransition springConfig={presets.wobbly} className="text-animation-mobile">
+                  {text[index % text.length]}
+              </TextTransition>
+                </p>
+            </div>
             <a
               href="https://www.instagram.com/dimasfranss_/"
               className="icon-instagram"
