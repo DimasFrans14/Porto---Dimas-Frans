@@ -267,6 +267,10 @@
   ul.list-mobile{
     padding-left: 0rem;
   }
+
+  .shape{
+    display: none;
+  }
 }
 
 @media screen and (max-width:766px) {
@@ -307,5 +311,37 @@
 @media screen and (min-width:767px) and (max-width:1023px) {
   .page-loader{
     left:48%;
+  }
+
+  .shape{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .icon-hero{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .shape {
+    position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+  }
+  
+  .shape svg {
+    position: relative;
+      display: block;
+      width: calc(134% + 1.3px);
+      height: 345px;
+  }
+  
+  .shape .shape-fill {
+    fill: #CEE7EF;
   }
 }
